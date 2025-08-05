@@ -282,7 +282,7 @@ const Features = () => {
               How our fleet management technology works
             </h2>
             <p className="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
-              We combines advanced IoT sensors, AI-powered analytics, and real-time monitoring systems to create comprehensive fleet management solutions that optimize operations, enhance safety, and reduce costs.
+              We combine advanced IoT sensors, AI-powered analytics, and real-time monitoring systems to create comprehensive fleet management solutions that optimize operations, enhance safety, and reduce costs.
             </p>
           </div>
 
@@ -351,19 +351,18 @@ const Features = () => {
               <div className="max-w-3xl mx-auto">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-3">
                   <div className="flex items-center">
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-blue-800 bg-clip-text text-transparent">Adaptation Project</h3>
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-blue-800 bg-clip-text text-transparent">Fleet Solution Development</h3>
                   </div>
                   <div className="flex items-center">
                     <span className="text-sm text-blue-600 font-medium mr-2">
-                      Iterative Development
+                      Custom Fleet Integration
                     </span>
                     <RefreshCcw className="h-5 w-5 text-blue-600 animate-rotate-slow" />
                   </div>
                 </div>
 
                 <p className="text-gray-700 mb-6 text-lg leading-relaxed">
-                  Working iteratively with customers to tailor solutions to
-                  their needs
+                  Working closely with fleet operators to customize tire management and video telematics solutions for their specific operational requirements
                 </p>
 
                 <div className="relative mb-4">
@@ -413,11 +412,11 @@ const Features = () => {
                       <CheckCircle className="h-5 w-5 text-white" />
                     </div>
                     <span className="text-sm text-gray-700 font-medium">
-                      Customer feedback integrated at every stage
+                      Fleet operator feedback integrated at every stage
                     </span>
                   </div>
                   <div className="text-sm text-blue-600 font-medium flex items-center mt-2 sm:mt-0">
-                    <span className="mr-3">Continuous improvement</span>
+                    <span className="mr-3">Continuous optimization</span>
                     <div className="flex space-x-2">
                       <span className="inline-block w-3 h-3 bg-blue-400 rounded-full animate-pulse"></span>
                       <span className="inline-block w-3 h-3 bg-purple-400 rounded-full animate-pulse animation-delay-200"></span>
@@ -452,9 +451,9 @@ const Features = () => {
                   <Rocket className="h-10 w-10 text-gray-700" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">Hitting the Market</h3>
+              <h3 className="text-xl font-bold mb-2">Fleet Deployment</h3>
               <p className="text-gray-700">
-                Ready to scale, produce, and launch
+                Ready to deploy, scale, and optimize fleet operations
               </p>
               <div className="flex justify-center mt-4 space-x-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-gray-300 animate-pulse"></span>
