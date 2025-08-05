@@ -216,14 +216,14 @@ const Features = () => {
         className="relative bg-white overflow-hidden py-10 md:py-[50px] w-full"
       >
         <div className="w-full px-4 sm:px-6 lg:px-8" ref={featuresRef}>
-          <div className="text-center mb-10 max-w-3xl mx-auto feature-item">
-            <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
+          <div className="text-center mb-16 max-w-4xl mx-auto feature-item">
+            <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-md">
               Fleet Management Solutions
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
               Maximize fleet safety with comprehensive monitoring systems
             </h2>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-700 mt-6 text-lg leading-relaxed">
               Invest and empower your fleet operations with advanced tire
               management and video telematics technology. Our comprehensive
               solutions transform traditional fleet monitoring into intelligent
