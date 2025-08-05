@@ -30,7 +30,7 @@ const Index = () => {
       <Features />
       <WhyWrlds />
       <Projects />
-      <BlogPreview />
+      {/* <BlogPreview /> */}
     </PageLayout>
   );
 };
