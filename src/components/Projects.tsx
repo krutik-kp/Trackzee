@@ -12,7 +12,7 @@ const projects = [
     brand: "TransLogistics Corp",
     description: "Comprehensive fleet management solution with tire monitoring, video telematics, and driver safety systems for commercial transportation operations.",
     tags: ["Fleet Management", "Tire Monitoring", "Video Telematics", "Safety"],
-    imageUrl: "/assets/fleet-operations.jpg",
+    imageUrl: "/src/assets/fleet-operations.jpg",
     isFeatured: true,
     link: "/projects/firecat",
     details: `
@@ -25,7 +25,7 @@ const projects = [
     brand: "Highway Transport Solutions",
     description: "Advanced video monitoring system with ADAS alerts, driver fatigue detection, and incident recording for long-haul trucking operations.",
     tags: ["Video Telematics", "ADAS", "Driver Monitoring", "Safety"],
-    imageUrl: "/assets/fleet-manager.jpg",
+    imageUrl: "/src/assets/video-telematics-feature.jpg",
     link: "/projects/sport-retail"
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     brand: "Fleet Pro Services",
     description: "Digital tire inventory and maintenance system eliminating paperwork and optimizing tire utilization across multiple depot locations.",
     tags: ["Tire Management", "Inventory", "Maintenance", "Cost Optimization"],
-    imageUrl: "/assets/fleet-operations.jpg",
+    imageUrl: "/src/assets/tire-management-feature.jpg",
     link: "/projects/workwear"
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     brand: "SafeFleet Logistics",
     description: "Comprehensive driver behavior monitoring with real-time alerts for harsh braking, speeding, and safety compliance reporting.",
     tags: ["Driver Safety", "Behavior Analytics", "Compliance", "Reporting"],
-    imageUrl: "/assets/fleet-manager.jpg",
+    imageUrl: "/src/assets/fleet-safety-feature.jpg",
     link: "/projects/hockey"
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     brand: "Commercial Transport Inc",
     description: "Integrated platform combining tire management, video telematics, and operational analytics for maximum fleet efficiency and cost reduction.",
     tags: ["Fleet Optimization", "Analytics", "Cost Reduction", "Efficiency"],
-    imageUrl: "/assets/fleet-operations.jpg",
+    imageUrl: "/src/assets/tire-stock-feature.jpg",
     link: "/projects/pet-tracker"
   }
 ];
@@ -165,40 +165,41 @@ const Projects = () => {
                 className={`absolute top-0 w-full max-w-md transform transition-all duration-500 ${getCardAnimationClass(index)}`} 
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
-                <Card className="overflow-hidden h-[500px] bg-white/95 backdrop-blur-sm border border-white/30 shadow-xl hover:shadow-2xl flex flex-col rounded-2xl">
+                <Card className="overflow-hidden h-[550px] bg-white/95 backdrop-blur-sm border border-white/30 shadow-2xl hover:shadow-3xl flex flex-col rounded-2xl group hover:-translate-y-2 transition-all duration-500">
                   <div 
-                    className="relative bg-black p-6 flex items-center justify-center h-48 overflow-hidden"
+                    className="relative bg-black p-8 flex items-center justify-center h-56 overflow-hidden"
                     style={{
                       backgroundImage: `url(${project.imageUrl})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     }}
                   >
-                    <div className="absolute inset-0 bg-black/50"></div>
-                    <div className="relative z-10 flex flex-col items-center justify-center">
-                      <h3 className="text-2xl font-bold text-white mb-2">{project.brand.toUpperCase()}</h3>
-                      <div className="w-12 h-1 bg-white mb-2"></div>
-                      <p className="text-white/90 text-sm">{project.title}</p>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center">
+                      <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mb-4 rounded-full shadow-lg"></div>
+                      <h3 className="text-2xl font-bold text-white mb-3 drop-shadow-lg">{project.brand.toUpperCase()}</h3>
+                      <p className="text-white/90 text-sm font-medium bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">{project.title}</p>
                     </div>
                   </div>
                   
-                  <CardContent className="p-6 flex flex-col flex-grow">
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold mb-1 text-gray-800 group-hover:text-gray-500 transition-colors">
+                  <CardContent className="p-8 flex flex-col flex-grow">
+                    <div className="mb-6">
+                      <h3 className="text-xl font-bold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-gray-500 text-sm font-medium">{project.brand}</p>
+                      <p className="text-blue-600 text-sm font-semibold">{project.brand}</p>
                     </div>
                     
-                    <p className="text-gray-600 text-sm mb-4 flex-grow">{project.description}</p>
+                    <p className="text-gray-700 text-sm mb-6 flex-grow leading-relaxed">{project.description}</p>
                     
                     <div className="mt-auto">
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <div className="flex flex-wrap gap-2 mb-6">
                         {project.tags.map((tag, idx) => (
                           <span 
                             key={idx} 
-                            className="px-2 py-1 bg-gray-50 text-gray-600 rounded-full text-xs animate-pulse-slow" 
-                            style={{ animationDelay: `${idx * 300}ms` }}
+                            className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 rounded-full text-xs font-medium border border-blue-200 hover:from-blue-100 hover:to-purple-100 transition-all duration-300 animate-pulse-slow" 
+                            style={{ animationDelay: `${idx * 200}ms` }}
                           >
                             {tag}
                           </span>
@@ -207,7 +208,7 @@ const Projects = () => {
                       
                       <Link 
                         to={project.link} 
-                        className="text-gray-500 flex items-center hover:underline relative overflow-hidden group"
+                        className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl group"
                         onClick={() => {
                           if (project.link.startsWith('/')) {
                             window.scrollTo(0, 0);
@@ -215,8 +216,7 @@ const Projects = () => {
                         }}
                       >
                         <span className="relative z-10">Learn more</span>
-                        <ArrowRight className="ml-2 w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" />
-                        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full"></span>
+                        <ArrowRight className="ml-2 w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" />
                       </Link>
                     </div>
                   </CardContent>
