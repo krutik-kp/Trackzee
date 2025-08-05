@@ -175,19 +175,19 @@ const Features = () => {
   const stepFlowItems = [
     {
       icon: <Microchip className="h-10 w-10 text-gray-700" />,
-      title: "WRLDS Proprietary Modules",
-      description: "Our core technology components developed in-house",
+      title: "IoT Sensor Technology",
+      description: "Advanced tire pressure and temperature monitoring with real-time data collection and predictive analytics",
     },
     {
       icon: <Factory className="h-10 w-10 text-gray-700" />,
-      title: "Vetted Off-the-Shelf Hardware",
+      title: "AI Video Telematics",
       description:
-        "Carefully selected components that complement our technology",
+        "Computer vision systems for driver monitoring, ADAS alerts, and safety compliance tracking",
     },
     {
       icon: <Handshake className="h-10 w-10 text-gray-700" />,
-      title: "Vetted Production Partners",
-      description: "Expert manufacturing partners for quality and reliability",
+      title: "Analytics & Reporting",
+      description: "Comprehensive fleet analytics with cost optimization and operational efficiency insights",
     },
   ];
   const sprintPhases = [
@@ -276,15 +276,13 @@ const Features = () => {
         <div className="w-full px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-3 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-md">
-              Our Approach
+              Our Technology
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
-              How our technology works
+              How our fleet management technology works
             </h2>
             <p className="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
-              WRLDS builds hardware and software with proprietary and
-              off-the-shelf modules, allowing us to develop completely unique
-              solutions at high speed and lower risk.
+              We combines advanced IoT sensors, AI-powered analytics, and real-time monitoring systems to create comprehensive fleet management solutions that optimize operations, enhance safety, and reduce costs.
             </p>
           </div>
 
@@ -313,20 +311,17 @@ const Features = () => {
                       <p className="text-gray-700 leading-relaxed">{item.description}</p>
                       {index === 0 && (
                         <p className="text-xs text-gray-500">
-                          Our proprietary technology provides the core
-                          foundation of every solution we build.
+                          Our advanced IoT sensors provide real-time data collection for tire pressure, temperature, and wear patterns, enabling predictive maintenance and cost optimization.
                         </p>
                       )}
                       {index === 1 && (
                         <p className="text-xs text-gray-500">
-                          We carefully select the best off-the-shelf components
-                          to complement our proprietary technology.
+                          AI-powered video telematics systems monitor driver behavior, detect fatigue, and provide ADAS alerts to enhance fleet safety and reduce accidents.
                         </p>
                       )}
                       {index === 2 && (
                         <p className="text-xs text-gray-500">
-                          Our network of production partners ensures quality
-                          manufacturing at scale.
+                          Comprehensive analytics and reporting systems deliver actionable insights for fleet optimization, cost reduction, and operational efficiency improvements.
                         </p>
                       )}
                     </div>
