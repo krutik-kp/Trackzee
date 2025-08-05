@@ -66,8 +66,8 @@ const Hero = () => {
             alt="Advanced Fleet Management Solutions Dashboard" 
             className={`w-full h-full object-cover opacity-40 ${isMobile ? 'object-center' : 'object-center'}`} 
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-blue-900/40 to-purple-900/80"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-white/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-blue-900/40 to-purple-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-white/100"></div>
         </div>
         
         <div className="banner-overlay bg-transparent pt-20 sm:pt-24 md:pt-32 w-full">
@@ -158,7 +158,7 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto ">
         <motion.div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6" variants={containerVariants} initial="hidden" animate="visible" transition={{
         delay: 0.6
       }}>

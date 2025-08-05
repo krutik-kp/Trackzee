@@ -97,9 +97,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">Company</h3>
             <ul className="space-y-3">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
           
