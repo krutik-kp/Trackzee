@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full", isScrolled ? "bg-white shadow-sm" : "bg-black")} initial={{
+    <motion.nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full backdrop-blur-md", isScrolled ? "bg-white/90 shadow-xl border-b border-gray-200/50" : "bg-black/20")} initial={{
       opacity: 1,
       y: 0
     }} animate={{
@@ -58,7 +58,7 @@ const Navbar = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link to="/">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-blue-600 font-medium" : "text-white hover:text-blue-300 bg-transparent hover:bg-white/10 font-medium")}>
                       Home
                     </NavigationMenuLink>
                   </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 
                 <NavigationMenuItem>
                   <Link to="/about">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-blue-600 font-medium" : "text-white hover:text-blue-300 bg-transparent hover:bg-white/10 font-medium")}>
                       About Us
                     </NavigationMenuLink>
                   </Link>

@@ -66,19 +66,19 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-black text-white pt-16 pb-8 w-full">
+    <footer id="contact" className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white pt-20 pb-12 w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 pb-12 border-b border-white/20">
           <div className="lg:col-span-2">
             <img 
               src="/lovable-uploads/7d120ee6-3614-4b75-9c35-716d54490d67.png" 
               alt="WRLDS Technologies Logo" 
               className="h-10 w-auto mb-6 invert" // Added invert to make logo white
             />
-            <p className="text-gray-300 mb-6">
+            <p className="text-blue-100 mb-8 leading-relaxed">
               WRLDS Technologies provides an end-to-end platform for the creation and deployment of AI-powered smart sensor devices, giving customers 100% ownership while handling the complete technological development.
             </p>
-            <p className="text-gray-300 mb-6">
+            <p className="text-blue-100 mb-8">
               Hornsgatan 110<br />
               117 26, Stockholm Sweden
             </p>
@@ -87,9 +87,9 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/wrldstechnologies/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
+                className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
-                <Linkedin size={20} />
+                <Linkedin size={22} />
               </a>
             </div>
           </div>

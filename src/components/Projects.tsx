@@ -126,16 +126,16 @@ const Projects = () => {
     return "scale-90 opacity-0";
   };
   
-  return <section id="projects" ref={projectsRef} className="bg-white py-[50px] w-full">
+  return <section id="projects" ref={projectsRef} className="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 py-20 w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className={`text-center mb-10 max-w-3xl mx-auto transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+        <div className={`text-center mb-16 max-w-3xl mx-auto transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-md">
             Customer Cases
           </div>
-          <h2 className="text-3xl font-bold mb-3">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
             Fleet Management Solutions
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-700 text-lg leading-relaxed">
             Explore how our tire management and video telematics solutions are transforming fleet operations with intelligent monitoring systems tailored to transportation needs.
           </p>
           {isMobile && (
@@ -165,7 +165,7 @@ const Projects = () => {
                 className={`absolute top-0 w-full max-w-md transform transition-all duration-500 ${getCardAnimationClass(index)}`} 
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
-                <Card className="overflow-hidden h-[500px] border border-gray-100 shadow-sm hover:shadow-md flex flex-col">
+                <Card className="overflow-hidden h-[500px] bg-white/95 backdrop-blur-sm border border-white/30 shadow-xl hover:shadow-2xl flex flex-col rounded-2xl">
                   <div 
                     className="relative bg-black p-6 flex items-center justify-center h-48 overflow-hidden"
                     style={{

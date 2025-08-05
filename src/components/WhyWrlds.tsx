@@ -87,10 +87,10 @@ const WhyWrlds = () => {
         once: true,
         margin: "-100px"
       }} variants={containerVariants}>
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-800 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-3">
             Fleet Management Excellence
           </motion.h2>
-          <motion.p variants={itemVariants} className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <motion.p variants={itemVariants} className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
             Transform your fleet operations with comprehensive tire management and video telematics solutions. Our integrated platform delivers measurable results across safety, efficiency, and cost optimization.
           </motion.p>
         </motion.div>
@@ -99,36 +99,36 @@ const WhyWrlds = () => {
         once: true,
         margin: "-100px"
       }} variants={containerVariants}>
-          <motion.div variants={itemVariants} className="bg-gray-100 p-6 rounded-xl border border-gray-200 text-center hover:bg-gray-200 transition-all">
-            <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-4">
-              <BarChart className="w-8 h-8 text-gray-700" />
+          <motion.div variants={itemVariants} className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 text-center hover:from-blue-100 hover:to-blue-200 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center mx-auto mb-4 shadow-md">
+              <BarChart className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-gray-900 text-2xl lg:text-3xl font-bold mb-3">
+            <h3 className="text-blue-900 text-2xl lg:text-3xl font-bold mb-3">
               <AnimatedCounter end={3.8} decimals={1} suffix=" Billion" /> USD
             </h3>
-            <p className="text-gray-700">Global fleet management market value projected by 2030, with tire costs being the second-largest expense after fuel for fleet operations</p>
+            <p className="text-blue-800">Global fleet management market value projected by 2030, with tire costs being the second-largest expense after fuel for fleet operations</p>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="bg-gray-100 p-6 rounded-xl border border-gray-200 text-center hover:bg-gray-200 transition-all">
-            <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-4">
-              <AlertTriangle className="w-8 h-8 text-gray-700" />
+          <motion.div variants={itemVariants} className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200 text-center hover:from-orange-100 hover:to-orange-200 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mx-auto mb-4 shadow-md">
+              <AlertTriangle className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-gray-900 text-2xl lg:text-3xl font-bold mb-3">
+            <h3 className="text-orange-900 text-2xl lg:text-3xl font-bold mb-3">
               <AnimatedCounter end={60} suffix="%" /> 
             </h3>
-            <p className="text-gray-700">
+            <p className="text-orange-800">
               Reduction in tire-related costs achievable through comprehensive tire management systems and proactive maintenance scheduling
             </p>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="bg-gray-100 p-6 rounded-xl border border-gray-200 text-center hover:bg-gray-200 transition-all">
-            <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-4">
-              <Clock4 className="w-8 h-8 text-gray-700" />
+          <motion.div variants={itemVariants} className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200 text-center hover:from-green-100 hover:to-green-200 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center mx-auto mb-4 shadow-md">
+              <Clock4 className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-gray-900 text-2xl lg:text-3xl font-bold mb-3">
+            <h3 className="text-green-900 text-2xl lg:text-3xl font-bold mb-3">
               <AnimatedCounter end={80} suffix="%" />
             </h3>
-            <p className="text-gray-700">
+            <p className="text-green-800">
               Improvement in driver safety and accident prevention through video telematics and real-time monitoring systems
             </p>
           </motion.div>
@@ -139,59 +139,59 @@ const WhyWrlds = () => {
           margin: "-100px"
         }} variants={containerVariants}>
           <motion.div variants={itemVariants} className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-800 to-blue-800 bg-clip-text text-transparent mb-3">
               Comprehensive Fleet Solutions
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               Optimize fleet operations, enhance driver safety, and reduce operational costs with our integrated tire management and video telematics platform designed for enterprise-grade performance.
             </p>
           </motion.div>
           
           <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-start">
-                <div className="bg-gray-200 rounded-full p-3 mr-4">
-                  <BarChart className="w-6 h-6 text-gray-700" />
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-full p-3 mr-4 shadow-md">
+                  <BarChart className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Tire Management Systems</h4>
-                  <p className="text-gray-700">Comprehensive tire tracking, inventory management, and maintenance scheduling that eliminates paperwork and optimizes tire utilization.</p>
+                  <h4 className="text-xl font-bold text-blue-900 mb-2">Tire Management Systems</h4>
+                  <p className="text-blue-800">Comprehensive tire tracking, inventory management, and maintenance scheduling that eliminates paperwork and optimizes tire utilization.</p>
                 </div>
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-start">
-                <div className="bg-gray-200 rounded-full p-3 mr-4">
-                  <Sparkles className="w-6 h-6 text-gray-700" />
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full p-3 mr-4 shadow-md">
+                  <Sparkles className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Video Telematics & Driver Safety</h4>
-                  <p className="text-gray-700">Advanced driver monitoring with ADAS/DMS alerts, live streaming, and behavior analysis to enhance fleet safety and reduce accidents.</p>
+                  <h4 className="text-xl font-bold text-purple-900 mb-2">Video Telematics & Driver Safety</h4>
+                  <p className="text-purple-800">Advanced driver monitoring with ADAS/DMS alerts, live streaming, and behavior analysis to enhance fleet safety and reduce accidents.</p>
                 </div>
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-start">
-                <div className="bg-gray-200 rounded-full p-3 mr-4">
-                  <Zap className="w-6 h-6 text-gray-700" />
+                <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-full p-3 mr-4 shadow-md">
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Fleet Analytics & Reporting</h4>
-                  <p className="text-gray-700">Real-time fleet monitoring with comprehensive reporting, cost analysis, and performance insights for data-driven decision making.</p>
+                  <h4 className="text-xl font-bold text-orange-900 mb-2">Fleet Analytics & Reporting</h4>
+                  <p className="text-orange-800">Real-time fleet monitoring with comprehensive reporting, cost analysis, and performance insights for data-driven decision making.</p>
                 </div>
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all">
+            <motion.div variants={itemVariants} className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-start">
-                <div className="bg-gray-200 rounded-full p-3 mr-4">
-                  <Rocket className="w-6 h-6 text-gray-700" />
+                <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-full p-3 mr-4 shadow-md">
+                  <Rocket className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">24/7 Fleet Monitoring</h4>
-                  <p className="text-gray-700">Continuous surveillance with mobile app support, multi-channel access, and real-time alerts for proactive fleet management.</p>
+                  <h4 className="text-xl font-bold text-green-900 mb-2">24/7 Fleet Monitoring</h4>
+                  <p className="text-green-800">Continuous surveillance with mobile app support, multi-channel access, and real-time alerts for proactive fleet management.</p>
                 </div>
               </div>
             </motion.div>
@@ -201,7 +201,7 @@ const WhyWrlds = () => {
             <Link 
               to="/development-process" 
               onClick={() => window.scrollTo(0, 0)}
-              className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all group"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-xl"
             >
               Learn more about our structured development process
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
