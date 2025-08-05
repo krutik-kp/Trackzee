@@ -1,12 +1,26 @@
-import { ArrowRight, Code, Cpu, Layers, MessageSquare } from "lucide-react";
+import { ArrowRight, Code, Cpu, Layers, MessageSquare, Play, Shield, TrendingUp, Zap, Pause } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useState, useRef } from "react";
 import fleetManagementHero from "@/assets/fleet-management-hero.jpg";
 import fleetTrucksPoster from "@/assets/fleet-trucks-poster.jpg";
 
 const Hero = () => {
   const isMobile = useIsMobile();
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleHeroVideo = () => {
+    if (heroVideoRef.current) {
+      if (isVideoPlaying) {
+        heroVideoRef.current.pause();
+      } else {
+        heroVideoRef.current.play();
+      }
+      setIsVideoPlaying(!isVideoPlaying);
+    }
+  };
   const containerVariants = {
     hidden: {
       opacity: 0
@@ -58,6 +72,54 @@ const Hero = () => {
         
         <div className="banner-overlay bg-transparent pt-20 sm:pt-24 md:pt-32 w-full">
           <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-full">
+            {/* Floating Video Preview */}
+            <motion.div 
+              className="absolute top-20 right-8 hidden lg:block"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
+            >
+              <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-white/20">
+                <div className="w-64 h-40 rounded-xl overflow-hidden relative group cursor-pointer hover:scale-105 transition-transform duration-300">
+                  <video
+                    ref={heroVideoRef}
+                    className="w-full h-full object-cover"
+                    poster="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+                    muted
+                    onPlay={() => setIsVideoPlaying(true)}
+                    onPause={() => setIsVideoPlaying(false)}
+                  >
+                    <source src="/lovable-uploads/video_1751292840840_1751292842546_2.mp4" type="video/mp4" />
+                  </video>
+                  
+                  {/* Video Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-purple-600/20 flex items-center justify-center">
+                    <button
+                      onClick={toggleHeroVideo}
+                      className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 hover:bg-white/30"
+                    >
+                      {isVideoPlaying ? (
+                        <Pause className="w-6 h-6 text-white" />
+                      ) : (
+                        <Play className="w-6 h-6 text-white ml-1" />
+                      )}
+                    </button>
+                  </div>
+                  
+                  {/* Video Info */}
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="bg-black/60 backdrop-blur-sm rounded-lg p-2">
+                      <h4 className="text-white font-semibold text-xs">Tire Monitoring Demo</h4>
+                      <p className="text-white/80 text-xs">2:34 min</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                </div>
+              </div>
+            </motion.div>
+            
             <motion.div className="w-full max-w-4xl text-center" variants={itemVariants}>
               <motion.h1 className="banner-title text-white" variants={itemVariants}>
                 Advanced <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 bg-clip-text text-transparent">Fleet Management Solutions</span> for Modern Transportation

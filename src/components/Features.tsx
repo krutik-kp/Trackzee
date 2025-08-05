@@ -232,26 +232,7 @@ const Features = () => {
             </p>
           </div>
         
-          <div className="mt-16 mb-8 feature-item">
-            <div className="text-center mb-8">
-              <div className="inline-block mb-2 px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-md">
-                Fleet Technology Applications
-              </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-blue-800 bg-clip-text text-transparent">
-                Real-World Fleet Solutions
-              </h3>
-              <p className="text-gray-700 mt-3 max-w-2xl mx-auto leading-relaxed">
-                Explore how our tire management and video telematics solutions
-                are applied across different transportation sectors, from
-                freight operations to fleet safety and driver monitoring.
-                <span className="block text-sm mt-2 text-blue-600 font-medium hover:text-blue-700 transition-colors cursor-pointer">
-                  Scroll horizontally to see more examples →
-                </span>
-              </p>
-            </div>
-
-           
-          </div>
+         
         </div>
         <div className="text-center mt-12 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button
