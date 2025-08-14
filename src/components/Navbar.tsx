@@ -46,11 +46,40 @@ const Navbar = () => {
     }}>
       <div className="w-full px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <img src="/lovable-uploads/7d120ee6-3614-4b75-9c35-716d54490d67.png" alt="WRLDS Technologies Logo" className={cn("h-8 w-auto", isScrolled ? "" : "brightness-0 invert")} />
+        <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center gap-3" aria-label="ATPM - African Tracking Promotion Mauritanie">
+              <span
+                className={cn(
+                  "inline-flex items-center justify-center rounded-md",
+                )}
+                aria-hidden="true"
+              >
+                <img
+                  src="/ATPM1.png"
+                  alt="ATPM logo"
+                  title="ATPM"
+                  loading="eager"
+                  decoding="async"
+                  style={{ imageRendering: 'auto' }}
+                  className={cn(
+                    "h-12 sm:h-12 md:h-14 w-auto object-contain select-none",
+                    isScrolled ? "opacity-100" : "opacity-100"
+                  )}
+                />
+              </span>
+              <div className="leading-none">
+                <span className={cn(
+                  "block font-semibold tracking-wide text-base sm:text-lg",
+                  isScrolled ? "text-gray-800" : "text-white"
+                )}>ATPM</span>
+                <span className={cn(
+                  "hidden md:block text-[11px] sm:text-xs font-medium",
+                  isScrolled ? "text-gray-500" : "text-gray-200/80"
+                )}>African Tracking Promotion Mauritanie</span>
+              </div>
             </Link>
           </div>
+          
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">

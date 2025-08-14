@@ -70,11 +70,20 @@ const Footer = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 pb-12 border-b border-white/20">
           <div className="lg:col-span-2">
-            <img 
-              src="/lovable-uploads/7d120ee6-3614-4b75-9c35-716d54490d67.png" 
-              alt="WRLDS Technologies Logo" 
-              className="h-10 w-auto mb-6 invert" // Added invert to make logo white
-            />
+            <div className="flex items-center gap-2 mb-6">
+              <img
+                src="/ATPM1.png"
+                alt="ATPM logo"
+                title="ATPM"
+                className="h-12 w-auto object-contain rounded-md shadow-sm"
+                loading="eager"
+                decoding="async"
+              />
+              <div className="leading-tight">
+                <span className="block text-white font-semibold text-lg">ATPM</span>
+                <span className="block text-blue-100 text-xs">African Tracking Promotion Mauritanie</span>
+              </div>
+            </div>
             <p className="text-blue-100 mb-8 leading-relaxed">
               WRLDS Technologies provides an end-to-end platform for the creation and deployment of AI-powered smart sensor devices, giving customers 100% ownership while handling the complete technological development.
             </p>
