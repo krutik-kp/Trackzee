@@ -5,6 +5,7 @@ import Features from '@/components/Features';
 import Projects from '@/components/Projects';
 import WhyWrlds from '@/components/WhyWrlds';
 import BlogPreview from '@/components/BlogPreview';
+import VisualContent from '@/components/VisualContent';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
 
@@ -27,6 +28,7 @@ const Index = () => {
         keywords={['smart textiles', 'wearable technology', 'textile sensors', 'sports tech', 'safety monitoring', 'performance analytics', 'manufacturing']}
       />
       <Hero />
+      <VisualContent />
       <Features />
       <WhyWrlds />
       <Projects />

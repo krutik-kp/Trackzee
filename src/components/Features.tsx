@@ -175,19 +175,19 @@ const Features = () => {
   const stepFlowItems = [
     {
       icon: <Microchip className="h-10 w-10 text-gray-700" />,
-      title: "WRLDS Proprietary Modules",
-      description: "Our core technology components developed in-house",
+      title: "IoT Sensor Technology",
+      description: "Advanced tire pressure and temperature monitoring with real-time data collection and predictive analytics",
     },
     {
       icon: <Factory className="h-10 w-10 text-gray-700" />,
-      title: "Vetted Off-the-Shelf Hardware",
+      title: "AI Video Telematics",
       description:
-        "Carefully selected components that complement our technology",
+        "Computer vision systems for driver monitoring, ADAS alerts, and safety compliance tracking",
     },
     {
       icon: <Handshake className="h-10 w-10 text-gray-700" />,
-      title: "Vetted Production Partners",
-      description: "Expert manufacturing partners for quality and reliability",
+      title: "Analytics & Reporting",
+      description: "Comprehensive fleet analytics with cost optimization and operational efficiency insights",
     },
   ];
   const sprintPhases = [
@@ -216,14 +216,14 @@ const Features = () => {
         className="relative bg-white overflow-hidden py-10 md:py-[50px] w-full"
       >
         <div className="w-full px-4 sm:px-6 lg:px-8" ref={featuresRef}>
-          <div className="text-center mb-10 max-w-3xl mx-auto feature-item">
-            <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
+          <div className="text-center mb-16 max-w-4xl mx-auto feature-item">
+            <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-md">
               Fleet Management Solutions
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
               Maximize fleet safety with comprehensive monitoring systems
             </h2>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-700 mt-6 text-lg leading-relaxed">
               Invest and empower your fleet operations with advanced tire
               management and video telematics technology. Our comprehensive
               solutions transform traditional fleet monitoring into intelligent
@@ -231,238 +231,78 @@ const Features = () => {
               deliver real-time operational insights.
             </p>
           </div>
-
-          {/* Scroll-hijacked features section */}
-          <div
-            ref={hijackSectionRef}
-            className={cn(
-              "relative transition-all duration-500",
-              isHijacked
-                ? "fixed inset-0 z-50 bg-black"
-                : "grid grid-cols-1 md:grid-cols-2 gap-5"
-            )}
-            style={{ height: isHijacked ? "100vh" : "auto" }}
-          >
-            {isHijacked && (
-              <div className="absolute top-4 right-4 z-10 text-white text-sm opacity-70">
-                {currentIndex + 1} / {features.length}
-              </div>
-            )}
-
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "feature-item group relative rounded-xl overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-[1.02] hover:rotate-[0.3deg]",
-                  isHijacked
-                    ? cn(
-                        "absolute inset-0 w-full h-full",
-                        index === currentIndex
-                          ? "opacity-100 translate-x-0"
-                          : index < currentIndex
-                          ? "opacity-0 -translate-x-full"
-                          : "opacity-0 translate-x-full"
-                      )
-                    : "h-[280px]"
-                )}
-                style={{
-                  transitionDelay: isHijacked ? "0ms" : `${index * 100}ms`,
-                }}
-                onMouseEnter={() => !isHijacked && setHoveredFeature(index)}
-                onMouseLeave={() => !isHijacked && setHoveredFeature(null)}
-              >
-                <div className="absolute inset-0 w-full h-full">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className={cn(
-                      "w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700",
-                      isHijacked ? "grayscale-0" : "grayscale"
-                    )}
-                  />
-                  <div
-                    className={cn(
-                      "absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30 transition-opacity duration-500",
-                      isHijacked
-                        ? "opacity-100"
-                        : hoveredFeature === index
-                        ? "opacity-60"
-                        : "opacity-80"
-                    )}
-                  ></div>
-                </div>
-
-                <div
-                  className={cn(
-                    "relative z-10 flex flex-col justify-center",
-                    isHijacked
-                      ? "p-16 h-full text-center items-center"
-                      : "p-6 h-full justify-between"
-                  )}
-                >
-                  <div className={isHijacked ? "space-y-8" : ""}>
-                    <div
-                      className={cn(
-                        "inline-block p-3 bg-white/10 backdrop-blur-md rounded-lg shadow-md transition-all duration-300 transform",
-                        isHijacked
-                          ? "mb-6 scale-150"
-                          : hoveredFeature === index
-                          ? "mb-4 scale-110"
-                          : "mb-4"
-                      )}
-                    >
-                      <div
-                        className={`transition-transform duration-300 ease-in-out ${
-                          !isHijacked && hoveredFeature === index
-                            ? "rotate-12 scale-110"
-                            : ""
-                        }`}
-                      >
-                        {feature.icon}
-                      </div>
-                    </div>
-
-                    <h3
-                      className={cn(
-                        "font-semibold text-white group-hover:underline decoration-white/70 underline-offset-4",
-                        isHijacked ? "text-4xl mb-6" : "text-xl mb-2"
-                      )}
-                    >
-                      {feature.title}
-                    </h3>
-                    <p
-                      className={cn(
-                        "text-white/90 leading-relaxed",
-                        isHijacked ? "text-lg max-w-2xl" : "text-sm"
-                      )}
-                    >
-                      {feature.description}
-                    </p>
-                  </div>
-
-                  {!isHijacked && (
-                    <div
-                      className={`h-0.5 bg-[#0057ff] mt-4 transition-all duration-500 ${
-                        hoveredFeature === index ? "w-full" : "w-0"
-                      }`}
-                    ></div>
-                  )}
-                </div>
-              </div>
-            ))}
-
-            {isHijacked && (
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center">
-                <div className="flex space-x-2 mb-4">
-                  {features.map((_, index) => (
-                    <div
-                      key={index}
-                      className={cn(
-                        "w-2 h-2 rounded-full transition-all duration-300",
-                        index === currentIndex ? "bg-white w-8" : "bg-white/50"
-                      )}
-                    />
-                  ))}
-                </div>
-                <p className="text-sm opacity-70">
-                  {isMobile ? "Swipe" : "Scroll"} to continue • Press ESC to
-                  exit
-                </p>
-              </div>
-            )}
-          </div>
-
-          <div className="mt-16 mb-8 feature-item">
-            <div className="text-center mb-8">
-              <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
-                Fleet Technology Applications
-              </div>
-              <h3 className="text-2xl font-bold">Real-World Fleet Solutions</h3>
-              <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-                Explore how our tire management and video telematics solutions
-                are applied across different transportation sectors, from
-                freight operations to fleet safety and driver monitoring.
-                <span className="block text-sm mt-1 text-blue-500">
-                  Scroll horizontally to see more examples →
-                </span>
-              </p>
-            </div>
-
-           
-          </div>
+        
+         
         </div>
         <div className="text-center mt-12 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button
             onClick={scrollToContact}
-            className="inline-flex items-center px-4 sm:px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white rounded-lg shadow-md hover:shadow-lg transition-all group w-full sm:w-auto"
+            className="inline-flex items-center px-6 sm:px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group w-full sm:w-auto font-medium"
           >
             Need Custom Solutions?
-            <MessageSquare className="ml-2 w-4 h-4 group-hover:animate-pulse" />
+            <MessageSquare className="ml-2 w-5 h-5 group-hover:animate-pulse" />
           </Button>
 
           <Button
             onClick={() => window.scrollTo(0, 0)}
-            className="inline-flex items-center px-4 sm:px-6 py-3 bg-white text-gray-700 rounded-lg border border-gray-200 hover:bg-gray-50 hover:shadow-md transition-all group w-full sm:w-auto"
+            className="inline-flex items-center px-6 sm:px-8 py-4 bg-white text-gray-800 rounded-xl border-2 border-gray-200 hover:border-blue-300 hover:bg-blue-50 hover:shadow-lg transition-all duration-300 group w-full sm:w-auto font-medium"
           >
             Learn More About Our Technology
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </section>
 
-      <section id="technology" className="bg-gray-50 py-10 md:py-16">
+      <section id="technology" className="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 py-16 md:py-24">
         <div className="w-full px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
-              Our Approach
+          <div className="text-center mb-16">
+            <div className="inline-block mb-3 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-md">
+              Our Technology
             </div>
-            <h2 className="text-3xl font-bold mb-4">
-              How our technology works
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
+              How our fleet management technology works
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              WRLDS builds hardware and software with proprietary and
-              off-the-shelf modules, allowing us to develop completely unique
-              solutions at high speed and lower risk.
+            <p className="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
+              We combine advanced IoT sensors, AI-powered analytics, and real-time monitoring systems to create comprehensive fleet management solutions that optimize operations, enhance safety, and reduce costs.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 mb-10 transition-all duration-300 hover:shadow-xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/20 p-10 mb-12 transition-all duration-300 hover:shadow-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {stepFlowItems.map((item, index) => (
                 <HoverCard key={index}>
                   <HoverCardTrigger asChild>
-                    <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 h-full cursor-pointer">
+                    <div className="bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/30 h-full cursor-pointer hover:-translate-y-2">
                       <div className="flex flex-col items-center text-center">
-                        <div className="bg-gray-50 rounded-full p-4 mb-4">
-                          {item.icon}
+                        <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-5 mb-6 shadow-lg">
+                          <div className="text-white">
+                            {item.icon}
+                          </div>
                         </div>
-                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                        <p className="text-sm text-gray-600">
+                        <h3 className="text-xl font-bold mb-3 text-gray-800">{item.title}</h3>
+                        <p className="text-gray-700 leading-relaxed">
                           {item.description}
                         </p>
                       </div>
                     </div>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-80 shadow-lg">
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold">{item.title}</h4>
-                      <p className="text-sm">{item.description}</p>
+                  <HoverCardContent className="w-80 shadow-2xl border border-white/20 bg-white/95 backdrop-blur-sm">
+                    <div className="space-y-3">
+                      <h4 className="text-lg font-bold text-gray-800">{item.title}</h4>
+                      <p className="text-gray-700 leading-relaxed">{item.description}</p>
                       {index === 0 && (
                         <p className="text-xs text-gray-500">
-                          Our proprietary technology provides the core
-                          foundation of every solution we build.
+                          Our advanced IoT sensors provide real-time data collection for tire pressure, temperature, and wear patterns, enabling predictive maintenance and cost optimization.
                         </p>
                       )}
                       {index === 1 && (
                         <p className="text-xs text-gray-500">
-                          We carefully select the best off-the-shelf components
-                          to complement our proprietary technology.
+                          AI-powered video telematics systems monitor driver behavior, detect fatigue, and provide ADAS alerts to enhance fleet safety and reduce accidents.
                         </p>
                       )}
                       {index === 2 && (
                         <p className="text-xs text-gray-500">
-                          Our network of production partners ensures quality
-                          manufacturing at scale.
+                          Comprehensive analytics and reporting systems deliver actionable insights for fleet optimization, cost reduction, and operational efficiency improvements.
                         </p>
                       )}
                     </div>
@@ -488,27 +328,26 @@ const Features = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-6 mb-10 shadow-md">
+            <div className="bg-gradient-to-br from-white/90 to-blue-50/90 backdrop-blur-sm rounded-2xl p-8 mb-12 shadow-xl border border-white/30">
               <div className="max-w-3xl mx-auto">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 gap-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-3">
                   <div className="flex items-center">
-                    <h3 className="text-xl font-bold">Adaptation Project</h3>
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-blue-800 bg-clip-text text-transparent">Fleet Solution Development</h3>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-sm text-gray-500 mr-2">
-                      Iterative Development
+                    <span className="text-sm text-blue-600 font-medium mr-2">
+                      Custom Fleet Integration
                     </span>
-                    <RefreshCcw className="h-5 w-5 text-gray-600 animate-rotate-slow" />
+                    <RefreshCcw className="h-5 w-5 text-blue-600 animate-rotate-slow" />
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-4">
-                  Working iteratively with customers to tailor solutions to
-                  their needs
+                <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                  Working closely with fleet operators to customize tire management and video telematics solutions for their specific operational requirements
                 </p>
 
-                <div className="relative mb-2">
-                  <Progress value={progressValue} className="h-3 bg-gray-200" />
+                <div className="relative mb-4">
+                  <Progress value={progressValue} className="h-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full" />
                 </div>
 
                 <div
@@ -521,26 +360,26 @@ const Features = () => {
                     <div
                       key={index}
                       className={cn(
-                        "text-center p-2 rounded transition-all",
+                        "text-center p-3 rounded-xl transition-all duration-300",
                         progressValue >= (index / sprintPhases.length) * 100 &&
                           progressValue <
                             ((index + 1) / sprintPhases.length) * 100
-                          ? "bg-blue-50 border border-blue-100"
-                          : "bg-gray-50"
+                          ? "bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 shadow-md"
+                          : "bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200"
                       )}
                     >
                       <div className="flex flex-col items-center">
                         <div
                           className={cn(
-                            "rounded-full p-1 mb-1",
+                            "rounded-full p-2 mb-2 transition-all duration-300",
                             progressValue >= (index / sprintPhases.length) * 100
-                              ? "bg-blue-100 text-blue-700"
-                              : "bg-gray-100 text-gray-500"
+                              ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg"
+                              : "bg-gray-200 text-gray-500"
                           )}
                         >
                           {phase.icon}
                         </div>
-                        <span className="text-xs font-medium">
+                        <span className="text-sm font-medium text-gray-700">
                           {phase.name}
                         </span>
                       </div>
@@ -548,21 +387,21 @@ const Features = () => {
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6 gap-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-8 gap-4">
                   <div className="flex items-center">
-                    <div className="bg-green-100 rounded-full p-1 mr-2 shrink-0">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-full p-2 mr-3 shrink-0 shadow-md">
+                      <CheckCircle className="h-5 w-5 text-white" />
                     </div>
-                    <span className="text-sm text-gray-600">
-                      Customer feedback integrated at every stage
+                    <span className="text-sm text-gray-700 font-medium">
+                      Fleet operator feedback integrated at every stage
                     </span>
                   </div>
-                  <div className="text-sm text-gray-500 flex items-center mt-2 sm:mt-0">
-                    <span className="mr-2">Continuous improvement</span>
-                    <div className="flex space-x-1">
-                      <span className="inline-block w-2 h-2 bg-gray-300 rounded-full animate-pulse"></span>
-                      <span className="inline-block w-2 h-2 bg-gray-400 rounded-full animate-pulse animation-delay-200"></span>
-                      <span className="inline-block w-2 h-2 bg-gray-500 rounded-full animate-pulse animation-delay-400"></span>
+                  <div className="text-sm text-blue-600 font-medium flex items-center mt-2 sm:mt-0">
+                    <span className="mr-3">Continuous optimization</span>
+                    <div className="flex space-x-2">
+                      <span className="inline-block w-3 h-3 bg-blue-400 rounded-full animate-pulse"></span>
+                      <span className="inline-block w-3 h-3 bg-purple-400 rounded-full animate-pulse animation-delay-200"></span>
+                      <span className="inline-block w-3 h-3 bg-blue-500 rounded-full animate-pulse animation-delay-400"></span>
                     </div>
                   </div>
                 </div>
@@ -593,9 +432,9 @@ const Features = () => {
                   <Rocket className="h-10 w-10 text-gray-700" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">Hitting the Market</h3>
+              <h3 className="text-xl font-bold mb-2">Fleet Deployment</h3>
               <p className="text-gray-700">
-                Ready to scale, produce, and launch
+                Ready to deploy, scale, and optimize fleet operations
               </p>
               <div className="flex justify-center mt-4 space-x-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-gray-300 animate-pulse"></span>

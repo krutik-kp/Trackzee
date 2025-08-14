@@ -132,22 +132,22 @@ const ContactForm = () => {
     }
   };
 
-  return <section id="contact" className="bg-gradient-to-b from-white to-black text-white relative py-[25px]">
+  return <section id="contact" className="bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 text-white relative py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block mb-3 px-3 py-1 bg-white text-black rounded-full text-sm font-medium">
+          <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-medium shadow-md">
             Get In Touch
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
             Contact Us Today
           </h2>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
             Have questions about our AI-powered sensor solutions? Reach out to our team and let's discuss how we can help bring your ideas to life.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-700 text-black">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border border-white/30 text-black">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField control={form.control} name="name" render={({
