@@ -200,7 +200,7 @@ const Hero = () => {
             <h3 className="text-lg md:text-xl font-bold mb-3 text-white">
               Tire Management System
             </h3>
-            <p className="text-blue-100 text-sm md:text-base leading-relaxed">
+            <p className="text-blue-800 text-sm md:text-base leading-relaxed">
               Track tire operations, stock, inspections, and maintenance
               scheduling for peak fleet performance.
             </p>
@@ -217,7 +217,7 @@ const Hero = () => {
             <h3 className="text-lg md:text-xl font-bold mb-3 text-white">
               Video Telematics
             </h3>
-            <p className="text-blue-100 text-sm md:text-base leading-relaxed">
+            <p className="text-blue-800 text-sm md:text-base leading-relaxed">
               Live streaming, history playback, ADAS/DMS alerts, and driver
               behavior analysis for safer operations.
             </p>
@@ -234,7 +234,7 @@ const Hero = () => {
             <h3 className="text-lg md:text-xl font-bold mb-3 text-white">
               Fleet Analytics
             </h3>
-            <p className="text-blue-100 text-sm md:text-base leading-relaxed">
+            <p className="text-blue-800 text-sm md:text-base leading-relaxed">
               Real-time monitoring, reporting, and operational insights to
               maximize efficiency and minimize risk.
             </p>
